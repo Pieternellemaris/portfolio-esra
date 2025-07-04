@@ -1,0 +1,346 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+  }
+  
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  #root, #__next {
+    isolation: isolate;
+  }
+
+/* colors 
+pink dark: #664147
+pink medium: #c4aaa8
+pink light: #eddfd7
+light: #f3efe3
+blue: #c7d4d1
+light brown: #a59483
+grey: #383a39
+dark: #262626 
+
+
+fonts 
+ font-family: "Crimson Text", serif;
+   font-family: "IM Fell Double Pica", serif;
+     font-family: "Fanwood Text", serif;
+font-family: "Baskervville", serif;
+font-family: "Della Respira", serif;
+*/
+
+button:hover {
+  cursor: pointer;
+}
+img:hover {
+    cursor: pointer;
+}
+nav {
+  font-family: "Crimson Text", serif;
+  font-size: 18pt;
+  border-radius: 10px;
+  margin: 25px;
+  padding: 0;
+  background-color: #c7d4d180;
+  height: 80px;
+font-size: 20pt;
+}
+ul {
+list-style-type: none;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 20px 0;
+}
+nav li {
+  width: inherit;
+
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropBtn {
+  border: none;
+  outline: none;
+
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropBtn {
+color: #a59483;
+}
+
+/* Dropdown content (hidden by default) */
+.dropContent {
+  display: none;
+  position: absolute;
+  background-color: #664147c4;
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 2px;
+}
+
+/* Links inside the dropdown */
+.dropContent a {
+  font-size: 14pt;
+
+  float: none;
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropContent a:hover {
+  background-color: #383a39 ;
+  color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropContent {
+  display: block;
+}
+a{
+  color: #383a39 ;
+  text-decoration: none;
+}
+a:hover {
+  color:#a59483 ;
+}
+
+h1 {
+    padding-top: 50px;
+    font-family: "Baskervville", serif;   
+    font-size: 45pt;
+    font-weight: 50;
+}
+h2 {
+    padding-top: 35px;
+    font-family: "Baskervville", serif;   
+    font-size: 25pt;
+    font-weight: 50;
+    text-align: center;
+}
+h3 {
+      font-size: 15pt;
+        font-family: "Fanwood Text", serif;
+}
+
+h4{
+      font-size: 15pt;
+        font-family: "IM Fell Double Pica", serif;
+}
+
+p {
+      font-size: 15pt;
+ font-family: "Crimson Text", serif;
+}
+
+
+body{
+    background-color: #f3efe3;
+
+}
+main {
+  width: 2500px;
+  height: 2000px;
+}
+
+
+.mini-window {
+  position: absolute;
+  top: calc(1000px - 25vh);
+  left: calc(1250px - 30vw);
+    border: 5px;
+    border-color: black;
+    border-style: dotted; 
+    border-radius: 20px;
+    min-height: 60vh;
+    min-width: 60vw;
+}
+
+.window {
+    margin: calc(35vh - 30vh) auto;
+  /* background-color: blue; */
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+
+.welcome {
+      text-align: center;
+    border-radius: 10px;
+    margin: 25px;
+    min-height: calc(50vh - 100px);
+    background-color: #c7d4d180;
+}
+
+.page-button{
+  font-size: 20pt;
+  width: 170px;
+  height: 60px;
+  border-width: 0;
+  border-radius: 10px;
+  color: white;
+}
+#schilderwerk{
+  background-color: #a59483;
+}
+#schilderwerk:hover {
+    border: 2px solid #8c7d6d;
+}
+#overig{
+  background-color: #c4aaa8;
+}
+#overig:hover{
+
+border: 2px solid #a18b8a;
+}
+
+.container-buttons{
+  display: flex;
+  width: inherit;
+margin-top: 60px;
+  justify-content: space-evenly;
+}
+
+.item-container{
+  width: inherit;
+  height: inherit;
+  list-style-type: none;
+  display: grid;
+  z-index: 0;
+  grid-template-columns:repeat(25,100px);
+  grid-template-rows: repeat(20, 100px);
+
+}
+
+.item img {
+      border-radius: 5px;
+}
+.openWindow {
+  z-index: 2;
+
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+  z-index: 10;
+  position: relative;
+}
+.preview {
+  width: 70vw;
+  height: 90vh;
+  padding: 10px;
+  background-color: #664147;
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.preview img {
+  max-width: 60vw;
+  max-height: 70vh;
+  display: block;
+  bottom: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.myAct {
+  transition-duration: 1s !important;
+  border: none !important;
+}
+.myAct2 {
+  opacity: 0%;
+  transition-duration: 1s !important;
+}
+
+#altar{
+  grid-column: 18 / 22 ;
+  grid-row: 18;
+}
+
+#werkkleding{
+  grid-column: 5 / 8 ;
+  grid-row: 8;
+}
+#no_name{
+  grid-column: 16 / 18 ;
+  grid-row: 6;
+}
+#ono{
+  grid-column: 19 / 23 ;
+  grid-row: 10;
+}
+#blad{
+  grid-column: 7 / 9 ;
+  grid-row: 13;
+}
+#sefarn{
+  grid-column: 6 / 9 ;
+  grid-row: 3;
+}
+#visions{
+  grid-column: 10 / 17 ;
+  grid-row: 15;
+}
+#insect{
+  grid-column: 17 / 21 ;
+  grid-row: 3;
+}
+#zw{
+  grid-column: 2 / 6 ;
+  grid-row: 16;
+}
+#space{
+    grid-column: 10 / 14 ;
+  grid-row: 2;
+
+}
+
+.event-content h1 {
+  padding-bottom: 20px;
+}
+.about-content {
+  padding: 20px 40px 10px 40px;
+}
