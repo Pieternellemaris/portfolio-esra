@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Esra van den Berg</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Della+Respira&family=Fanwood+Text:ital@0;1&family=IM+Fell+Double+Pica:ital@0;1&display=swap" rel="stylesheet">
+    <!-- <link rel="icon" href="./favicon.ico" type="image/x-icon"> -->
+  </head>
+  <body>
+<main> 
+    <div class="viewport">
+
+
+        <div id="mini-window" class="mini-window"> 
+          <nav class="nav">
+            <ul>
+                <li> <a href="index.html"> Home </a></li>
+                <li><a href="index.html" id="aboutLink"> About </a></li>
+                <li><a href="index.html" id="contactLink"> Contact </a></li>
+                <li> <a href="index.html" id="exhibLink"> Exhibitions </a></li>
+                <div class="dropdown"> 
+                  <button class="dropBtn"> Work
+                    <i class="fa fa-caret-down"></i>
+
+                  </button>
+           <div class="dropContent">  
+
+                  <a href="altar.html"> Altar </a>
+                  <a href="beschreven_blad.html"> Beschreven blad </a>
+                  <a href="i_am_having_visions_series.html"> I am having visions </a>
+                 <a href="untitled.html"> No name </a>
+                  <a href="ono.html"> Ono </a>               
+                   <a href="sefarn.html"> Sefarn </a>
+                   <a href="werkkleding.html"> Working gear </a>
+                   <a href="working_space.html"> Working space </a>
+                    <a href="[yet_to_be_titled].html"> yet_to_be_titled </a>
+                </div>
+                </div>
+            </ul>
+        </nav>
+            <div class="window" >
+
+                <div  id="hoverBox" class="welcome">
+                     <h1>Esra van den Berg</h1>  
+                     <div class="container-buttons">
+                <button  id='overig'class='active page-button'onclick="myDisapear(this)"> Schilderwerk</button>
+                <button id='schilderwerk'class=' active page-button'onclick="myDisapear(this)"> Overig</button>
+              </div>
+                </div>
+               
+            </div>
+
+
+        </div>
+
+        <div class="item-container" >
+            <div id='altar' class="item overig"> 
+              <img alt="altar image"
+                aria-label="Go to the page with more information about this work"
+
+                onclick="location.href='altar.html'; " src="images/altar2-1.jpg"> 
+            
+            </div>
+            <div id='werkkleding'class="item overig"> 
+              <img onclick="location.href='werkkleding.html'; "  src="images/werkkleding_tuinier.jpg"> </div>
+            <div id='no_name'class="item schilderwerk"> <img onclick="location.href='untitled.html'; "  src="images/(no_name).jpg"> </div>
+            <div id='ono'class="item schilderwerk"> <img onclick="location.href='ono.html'; "  src="images/ono_(close_up).jpg"> </div>
+            <div id='visions'class="item schilderwerk"> <img onclick="location.href='i_am_having_visions_series.html'; "  src="images/i_am_having_visions_series.jpg"> </div>
+            <div id='sefarn'class="item schilderwerk"> <img onclick="location.href='sefarn.html'; "  src="images/sefarn.jpg"> </div>     
+            <div id='blad'class="item overig"> <img onclick="location.href='beschreven_blad.html'; "  src="images/beschreven_blad.JPG"> </div>     
+            <div id='space'class="item overig"> <img onclick="location.href='working_space.html'; "  src="images/working_space.jpg"> </div>  
+            <div id='zw'class="item schilderwerk"> <img onclick="location.href='yet_to_be_titled.html'; "  src="images/zw1.jpg"> </div>  
+            <div id='insect'class="item overig"> <img onclick="location.href='insects.html'; "  src="images/blauwoogvlieg.jpg"> </div>                                                      
+    </div>
+
+    </main>
+        <script src="js/script.js"></script>
+  </body>
+</html>
