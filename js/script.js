@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     windowDiv.innerHTML = `
       <div class=" event-content contact-content">
         <h1>Esra van den Berg</h1>
-        <p>Email: esravandenberg2k@example.com</p>
+        <p>Email: esravandenberg2k@gmail.com</p>
         <p>Instagram: @astra2k</p>
       </div>
     `;
