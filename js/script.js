@@ -40,41 +40,37 @@ window.addEventListener('load', () => {
   smoothScroll();
 });
 
-
-
 function myDisapear(button) {
-  const categories = ['schilderwerk', 'overig'];
-  const clickedCategory = button.id;
-  const clickedItems = document.querySelectorAll('.' + clickedCategory);
-  const clickedButton = document.getElementById(clickedCategory);
+    const categories = ['schilderwerk', 'overig'];
+    const clicked = button.id;
 
-  // Check if clicked category is visible
-  const isVisible = Array.from(clickedItems).some(item => !item.classList.contains('hidden'));
+    console.log("Geklikt op:", clicked);
 
-  if (isVisible) {
-    clickedItems.forEach(item => item.classList.add('hidden'));
-    clickedButton.classList.remove('active');
-  } else {
-    clickedItems.forEach(item => item.classList.remove('hidden'));
-    clickedButton.classList.add('active');
-  }
+    // Check of knop al actief is
+    const isActive = button.classList.contains("active");
 
-  // Check if all categories are hidden
-  const allHidden = categories.every(cat => {
-    const items = document.querySelectorAll('.' + cat);
-    return Array.from(items).every(item => item.classList.contains('hidden'));
-  });
+    // ALS hij actief is → reset en toon alles
+    if (isActive) {
+        console.log("Knop was actief → reset");
+        categories.forEach(cat => {
+            document.querySelectorAll("." + cat).forEach(item => item.classList.remove("hidden"));
+            document.getElementById(cat).classList.remove("active");
+        });
+        return;
+    }
 
-  // If all hidden, reset to show all and activate buttons
-  if (allHidden) {
+    // Stap 1: verberg alles en deactiveer knoppen
     categories.forEach(cat => {
-      const items = document.querySelectorAll('.' + cat);
-      const btn = document.getElementById(cat);
-      items.forEach(item => item.classList.remove('hidden'));
-      btn.classList.add('active');
+        document.querySelectorAll("." + cat).forEach(item => item.classList.add("hidden"));
+        document.getElementById(cat).classList.remove("active");
     });
-  }
+
+    // Stap 2: toon alleen geklikte categorie
+    document.querySelectorAll("." + clicked).forEach(item => item.classList.remove("hidden"));
+    button.classList.add("active");
 }
+
+
 
 
 
@@ -93,11 +89,23 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     windowDiv.innerHTML = `
       <div class="event-content">
-  
-        <p class="about-content" >My art arises from the acts of painting, sculpture, world-building, and the conscious combining of collected found objects. I mainly work intuitively and start out from a material or a simple subject, like a skull or campfire. As I work, my art starts to create their own mythology. This means that my work inspires me to write stories about them. This is often where the title comes from. Archaeology, anatomy, the surrealistic, and the fantastical inspire me a lot, and through me my work and my worlds.
+  <img height= "600px" class="about-content" id="img-about"  src="images/about_1.jpeg" >
+        <p class="about-content" >My art arises from the acts of painting, sculpture, world-building, and the conscious combining
+of collected found objects. I mainly work intuitively and start out from a material or a simple
+subject, like a skull or campfire. As I work, my art starts to create their own mythology. This means
+that my work inspires me to write stories about them. This is often where the title comes from.
+Archaeology, anatomy, the surrealistic, and the fantastical inspire me a lot, and through me my
+work and my worlds.
+
 </p>
-<p class="about-content" >Lately, I’ve been noticing how many my fascinations in life are all linked to that what sets us as human beings apart from other animals. I have been seeing this in my work as well. And so, my research has started on the beauty of the human that just is. To see and admire this through the eyes of an outsider. (June 2025)
+<p class="about-content" >Lately, I’ve been noticing how many of my fascinations in life are all linked to that what
+sets us as human beings apart from other animals. I have been seeing this in my work as
+well. And so, my research has started on the beauty of the human that just is. To see and
+admire this through the eyes of an outsider. (June 2025)
+
 </p>
+
+
       </div>
     `;
   });
@@ -107,8 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
     windowDiv.innerHTML = `
       <div class=" event-content contact-content">
         <h1>Esra van den Berg</h1>
-        <p>Email: esravandenberg2k@gmail.com</p>
-        <p>Instagram: @astra2k</p>
+        <p>Email: esravandenberg2k@gmail.com  </p>
+        <p>Instagram: <a target= '_blank'href='https://www.instagram.com/astra2k'> @astra2k </a> </p>
       </div>
     `;
   });
@@ -119,9 +127,21 @@ exhibLink.addEventListener('click', (e) => {
     windowDiv.innerHTML = `
       <div class="event-content exhib-content">
         <h1>Esra van den Berg</h1>
-        <p>Graduation</p>
-        <p></p>
+          <img height= "250px" class="about-content" id="img-about"  src="images/keuze_1.jpg" >
+        <p>Graduation Show</p>
+        <p> Pak Me Dan 2025</p>
+        <p1> Pak Me Dan 2025</p1>
       </div>
     `;
   });
 });
+
+
+
+//Source - https://stackoverflow.com/a
+//Posted by sanoj lawrence
+//Retrieved 2025-12-04, License - CC BY-SA 3.0
+
+
+
+      if(history.replaceState) history.replaceState({}, "", "/");
