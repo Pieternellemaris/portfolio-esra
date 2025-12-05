@@ -1,3 +1,101 @@
-@media (max-width: 1500px) {
-
+@media (max-width: 1000px) {
+nav {
+      font-size: 16pt;
 }
+h1 {
+    font-size: 40pt;
+}
+.dropdown .dropBtn {
+    font-size: 16pt;
+}
+.item-container {
+    margin: 100px;
+        grid-template-columns: repeat(25, 90px);
+    grid-template-rows: repeat(20, 90px);
+}
+}
+
+@media (max-width: 850px) {
+nav {
+      font-size: 14pt;
+}
+h1 {
+    font-size: 35pt;
+}
+.mini-window {
+    left: calc(1250px - 40vw);
+    min-width: 80vw;
+}
+.dropdown .dropBtn {
+    font-size: 14pt;
+}
+.item-container {
+    margin: 220px;
+        grid-template-columns: repeat(25, 80px);
+    grid-template-rows: repeat(20, 80px);
+}
+}
+
+@media  (max-width: 750px) { 
+nav {
+    height: auto;
+    
+}
+.item-container {
+    margin: 280px;
+        grid-template-columns: repeat(25, 75px);
+    grid-template-rows: repeat(20, 75px);
+}
+h1 {
+    font-size: 30pt;
+}
+.container-buttons {
+    margin-top: 40px;
+}
+
+.welcome {
+        min-height: calc(50vh - 100px);
+}
+.page-button {
+    font-size: 17pt;
+    width: 140px;
+}
+}
+
+
+@media  (max-width: 600px) { 
+h1 {
+    font-size: 25pt;
+}
+.item-container {
+    margin: 380px;
+        grid-template-columns: repeat(25, 65px);
+    grid-template-rows: repeat(20, 65px);
+}
+.page-button {
+    font-size: 15pt;
+    width: 130px;
+    height: 50px;
+}
+.welcome {
+        min-height: calc(50vh - 120px);
+}
+}
+@media (max-height: 800px) {
+.welcome {
+    min-height: calc(60vh - 80px);
+}
+
+ }
+
+ @media (max-height: 640px) { 
+    .welcome {
+    min-height: calc(70vh - 80px);
+}
+ }
+
+  @media (max-height: 540px) {
+        .welcome {
+    min-height: calc(80vh - 80px);
+}
+   }
