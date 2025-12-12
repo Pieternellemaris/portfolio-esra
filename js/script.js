@@ -81,74 +81,87 @@ function myDisapear(button) {
     button.classList.add("active");
 }
 
-
-
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const windowDiv = document.getElementById('hoverBox');
-  
-  const aboutLink = document.getElementById('aboutLink');
-  const contactLink = document.getElementById('contactLink');
-    const exhibLink = document.getElementById('exhibLink');
 
-  aboutLink.addEventListener('click', (e) => {
-    e.preventDefault();
+  const $ = (id) => document.getElementById(id);
+  const aboutLink = $('aboutLink');
+  const contactLink = $('contactLink');
+  const exhibLink = $('exhibLink');
+
+  // ======== View functions ========
+  function showAbout() {
+    if (!windowDiv) return;
     windowDiv.innerHTML = `
       <div class="event-content">
-  <img height= "600px" class="about-content" id="img-about"  src="images/about_1.jpeg" >
-        <p class="about-content" >My art arises from the acts of painting, sculpture, world-building, and the conscious combining
-of collected found objects. I mainly work intuitively and start out from a material or a simple
-subject, like a skull or campfire. As I work, my art starts to create their own mythology. This means
-that my work inspires me to write stories about them. This is often where the title comes from.
-Archaeology, anatomy, the surrealistic, and the fantastical inspire me a lot, and through me my
-work and my worlds.
-
-</p>
-<p class="about-content" >Lately, I’ve been noticing how many of my fascinations in life are all linked to that what
-sets us as human beings apart from other animals. I have been seeing this in my work as
-well. And so, my research has started on the beauty of the human that just is. To see and
-admire this through the eyes of an outsider. (June 2025)
-
-</p>
-
-
+        <img height="600px" class="about-content" id="img-about" src="images/about_1.jpeg" alt="about">
+        <p class="about-content">
+          My art arises from the acts of painting, sculpture, world-building, and the conscious combining
+          of collected found objects. I mainly work intuitively and start out from a material or a simple
+          subject, like a skull or campfire. As I work, my art starts to create their own mythology. This means
+          that my work inspires me to write stories about them. This is often where the title comes from.
+          Archaeology, anatomy, the surrealistic, and the fantastical inspire me a lot, and through me my
+          work and my worlds.
+        </p>
+        <p class="about-content">
+          Lately, I’ve been noticing how many of my fascinations in life are all linked to that what
+          sets us as human beings apart from other animals. I have been seeing this in my work as
+          well. And so, my research has started on the beauty of the human that just is. To see and
+          admire this through the eyes of an outsider. (June 2025)
+        </p>
       </div>
     `;
-  });
+  }
 
-  contactLink.addEventListener('click', (e) => {
-    e.preventDefault();
+  function showContact() {
+    if (!windowDiv) return;
     windowDiv.innerHTML = `
-      <div class=" event-content contact-content">
+      <div class="event-content contact-content">
         <h1>Esra van den Berg</h1>
-        <p>Email: esravandenberg2k@gmail.com  </p>
-        <p>Instagram: <a target= '_blank'href='https://www.instagram.com/astra2k'> @astra2k </a> </p>
+        <p>Email: esravandenberg2k@gmail.com</p>
+        <p>Instagram: <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/astra2k">@astra2k</a></p>
       </div>
     `;
-  });
+  }
 
-
-exhibLink.addEventListener('click', (e) => {
-    e.preventDefault();
+  function showExhib() {
+    if (!windowDiv) return;
     windowDiv.innerHTML = `
-      <div class="event-content ">
-              <h1>Esra van den Berg</h1>
-      <section class="exhib-content">
-
-        <h3>Graduation Show</h3>
-        <p> Pak Me Dan 2025</p>
-        <p1> After four years, my time at the Institute of Arts in Maastricht came to an end. Our last assignment was to organize an exhibition and showcase our art pieces in a way that fit our art and helped tell the story. This page shows the my result of this final assignment. I'd love to hear what story you see in this exhibition.</p1>
-
-          <img id="img-exh" onclick="location.href='Graduation_Show/'; " height= "250px"   src="images/keuze_1.jpg" >
-    </section>
+      <div class="event-content">
+        <h1>Esra van den Berg</h1>
+        <section class="exhib-content">
+          <h3>Graduation Show</h3>
+          <p>Pak Me Dan 2025</p>
+          <p1>
+            After four years, my time at the Institute of Arts in Maastricht came to an end. Our last assignment
+            was to organize an exhibition and showcase our art pieces in a way that fit our art and helped tell
+            the story. This page shows my result of this final assignment. I'd love to hear what story you see in this exhibition.
+          </p1>
+          <img id="img-exh" onclick="location.href='Graduation_Show/';" height="250px" src="images/keuze_1.jpg" alt="exhibition">
+        </section>
       </div>
     `;
-  });
+  }
+
+  // ======== Attach click handlers on main page nav ========
+  if (aboutLink) aboutLink.addEventListener('click', (e) => { e.preventDefault(); showAbout(); });
+  if (contactLink) contactLink.addEventListener('click', (e) => { e.preventDefault(); showContact(); });
+  if (exhibLink)  exhibLink.addEventListener('click', (e) => { e.preventDefault(); showExhib(); });
+
+  // ======== Auto-load logic ========
+  const params = new URLSearchParams(window.location.search);
+  const viewParam = params.get('view');
+  const hash = window.location.hash ? window.location.hash.replace('#','') : null;
+  const stored = sessionStorage.getItem('autoView');
+
+  const targetView = viewParam || hash || stored;
+
+  if(targetView === 'about') showAbout();
+  if(targetView === 'contact') showContact();
+  if(targetView === 'exhib') showExhib();
+
+  // clear sessionStorage after use
+  if(stored) sessionStorage.removeItem('autoView');
 });
 
 
