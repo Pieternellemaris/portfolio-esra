@@ -142,7 +142,7 @@ exhibLink.addEventListener('click', (e) => {
 
         <h3>Graduation Show</h3>
         <p> Pak Me Dan 2025</p>
-        <p1> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra sodales faucibus. Maecenas aliquam neque in lorem interdum aliquet. Phasellus efficitur lorem vel lacus feugiat aliquam. Cras posuere felis nec augue egestas, sed euismod lacus volutpat. Etiam ac erat nec ante vestibulum varius in dapibus odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus orci ante, gravida a bibendum et, posuere eu libero. Integer auctor bibendum felis vitae porta. Vivamus blandit dignissim ante vitae pharetra. Ut dictum, lectus volutpat dapibus posuere, felis arcu pulvinar nisi, ac pharetra sapien erat et arcu. Pellentesque volutpat diam a nisl mollis fringilla.</p1>
+        <p1> After four years, my time at the Institute of Arts in Maastricht came to an end. Our last assignment was to organize an exhibition and showcase our art pieces in a way that fit our art and helped tell the story. This page shows the my result of this final assignment. I'd love to hear what story you see in this exhibition.</p1>
 
           <img id="img-exh" onclick="location.href='Graduation_Show/'; " height= "250px"   src="images/keuze_1.jpg" >
     </section>
