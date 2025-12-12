@@ -124,7 +124,8 @@ nav li {
 .dropdown .dropBtn {
   border: none;
   outline: none;
-
+  text-decoration: none;
+  color: black;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
