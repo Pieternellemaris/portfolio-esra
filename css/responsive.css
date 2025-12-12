@@ -81,7 +81,7 @@ h1 {
         min-height: calc(50vh - 120px);
 }
 }
-@media (max-height: 800px) {
+@media (max-height: 700px) {
 .welcome {
     min-height: calc(60vh - 80px);
 }

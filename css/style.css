@@ -358,5 +358,12 @@ margin-top: 60px;
     padding: 20px;
 }
 
-
-
+.exhib-content {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr ; 
+}
+#img-exh {
+  place-self: center;
+  padding: 20px;
+}
