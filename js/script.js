@@ -11,7 +11,16 @@ window.addEventListener('load', () => {
   // How fast to move (tweak for sensitivity)
   const speed = 0.02;
 
-  window.addEventListener('mousemove', (e) => {
+  function hasTouchSupport() {
+  return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+}
+
+if (hasTouchSupport()) {
+  console.log("Mobile device detected");
+  
+} else {
+  console.log("Desktop device detected");
+    window.addEventListener('mousemove', (e) => {
     const centerX = window.innerWidth / 2;
     const centerY = window.innerHeight / 2;
 
@@ -38,6 +47,8 @@ window.addEventListener('load', () => {
   }
 
   smoothScroll();
+}
+
 });
 
 function myDisapear(button) {
@@ -151,13 +162,4 @@ exhibLink.addEventListener('click', (e) => {
       if(history.replaceState) history.replaceState({}, "", "/");
 
 
-      
-function hasTouchSupport() {
-  return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-}
 
-if (hasTouchSupport()) {
-  console.log("Mobile device detected");
-} else {
-  console.log("Desktop device detected");
-}
