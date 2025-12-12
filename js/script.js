@@ -125,12 +125,16 @@ admire this through the eyes of an outsider. (June 2025)
 exhibLink.addEventListener('click', (e) => {
     e.preventDefault();
     windowDiv.innerHTML = `
-      <div class="event-content exhib-content">
-        <h1>Esra van den Berg</h1>
-          <img height= "250px" class="about-content" id="img-about"  src="images/keuze_1.jpg" >
-        <p>Graduation Show</p>
+      <div class="event-content ">
+              <h1>Esra van den Berg</h1>
+      <section class="exhib-content">
+
+        <h3>Graduation Show</h3>
         <p> Pak Me Dan 2025</p>
-        <p1> Pak Me Dan 2025</p1>
+        <p1> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra sodales faucibus. Maecenas aliquam neque in lorem interdum aliquet. Phasellus efficitur lorem vel lacus feugiat aliquam. Cras posuere felis nec augue egestas, sed euismod lacus volutpat. Etiam ac erat nec ante vestibulum varius in dapibus odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus orci ante, gravida a bibendum et, posuere eu libero. Integer auctor bibendum felis vitae porta. Vivamus blandit dignissim ante vitae pharetra. Ut dictum, lectus volutpat dapibus posuere, felis arcu pulvinar nisi, ac pharetra sapien erat et arcu. Pellentesque volutpat diam a nisl mollis fringilla.</p1>
+
+          <img id="img-exh" onclick="location.href='Graduation_Show/'; " height= "250px"   src="images/keuze_1.jpg" >
+    </section>
       </div>
     `;
   });
