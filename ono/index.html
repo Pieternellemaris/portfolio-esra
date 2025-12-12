@@ -19,10 +19,11 @@
       </h2>
           <nav class="nav">
             <ul>
-                <li> <a href="/index.html"> Home </a></li>
-                <li><a href="/index.html" id="aboutLink"> About </a></li>
-                <li><a href="/index.html" id="contactLink"> Contact </a></li>
-                <li> <a href="/index.html" id="exhibLink"> Exhibitions </a></li>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html" onclick="sessionStorage.setItem('autoView','about');">About</a></li>
+<li><a href="../index.html" onclick="sessionStorage.setItem('autoView','contact');">Contact</a></li>
+<li><a href="../index.html" onclick="sessionStorage.setItem('autoView','exhib');">Exhibitions</a></li>
+
                 <div class="dropdown"> 
                   <button class="dropBtn"> Art practice
                     <i class="fa fa-caret-down"></i>
@@ -33,7 +34,7 @@
                   <a href="altar.html"> Altar </a>
                   <a href="Animals_of_Vandar.html"> Animals of Vandar </a>               
                    <a href="Title_unknown.html"> Title Unknown </a>
-                   <a href="working_space.html"> Working space </a>
+                   <a href="Working_space.html"> Working space </a>
                   <a href="Worldbuilding.html"> Worldbuilding </a>
                 </div>
                 </div>
@@ -88,7 +89,9 @@
 
 
 </main>
+  <div id="fullpage" class="fullScreen" ></div>
 <footer></footer>
+        <script src="/js/script_2.js"></script>
 
   </body>
 </html>
