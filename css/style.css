@@ -195,8 +195,11 @@ main {
     border-color: black;
     border-style: dotted; 
     border-radius: 20px;
-    min-height: 60vh;
+    min-height: 450px;
+        max-height: 1000px;
+    height: 60vh;
     min-width: 60vw;
+
 }
 
 .window {
@@ -212,8 +215,10 @@ main {
       text-align: center;
     border-radius: 10px;
     margin: 25px;
-    min-height: calc(50vh - 80px);
+    height: calc(60vh - calc(35vh - 30vh) - 140px);
+    max-height: calc(1000px - calc(35vh - 30vh) - 140px);
     background-color: #c7d4d180;
+        min-height: 280px;
 }
 
 .page-button{

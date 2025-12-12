@@ -81,21 +81,3 @@ h1 {
         min-height: calc(50vh - 120px);
 }
 }
-@media (max-height: 700px) {
-.welcome {
-    min-height: calc(60vh - 80px);
-}
-
- }
-
- @media (max-height: 640px) { 
-    .welcome {
-    min-height: calc(70vh - 80px);
-}
- }
-
-  @media (max-height: 540px) {
-        .welcome {
-    min-height: calc(80vh - 80px);
-}
-   }
