@@ -46,7 +46,7 @@ h1 {
 h4{
     font-size: 12pt;
 }
-#information p1 {
+p1 {
         font-size: 12pt;
 }
 .mini-window {
@@ -84,6 +84,34 @@ h1 {
 .page-button {
     font-size: 17pt;
     width: 140px;
+}
+
+#information {
+    grid-column: 2 / 6;
+    grid-row: 1;
+}
+#image-container {
+    grid-column: 2 / 6;
+    grid-row: 2;
+}#images-gallery1 {
+    display: flex;
+    grid-column: 2 / 6;
+    grid-row: 3;
+            flex-wrap: wrap;
+}
+.grid-gal img{
+    max-width: calc((90vw - 21px )/ 3);
+}
+.hidden_vertical {
+    display: none;
+}
+.reveal_vertical {
+  display: block;
+}
+.work-page .dropBtn {
+    position: absolute;
+    top: 40px;
+    left: 5vw;
 }
 }
 
@@ -236,6 +264,11 @@ left: 3px;
     h1 {
 font-size: 15pt;
     }
+    .work-page .dropBtn {
+    position: absolute;
+    top: 43px;
+    left: 3vw;
+}
     p {
 font-size: 12pt;
 

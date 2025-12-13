@@ -194,7 +194,9 @@ main section {
     padding: 10px;
     border-left: 1px dashed #262626;
 }
-
+.grid-item img {
+padding: 5px;
+}
 .grid-gal img {
 padding: 5px;
 }
@@ -356,4 +358,7 @@ margin-top: 20px;
 
 .fullScreen.show {
   display: block;
+}
+.reveal_vertical {
+  display: none;
 }
