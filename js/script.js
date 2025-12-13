@@ -176,3 +176,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+function myFunction(x) {
+  x.classList.toggle("change");
+  const btn = document.getElementById("hiddenDrop");
+
+  var btnDisplay = window.getComputedStyle(btn).getPropertyValue("display"); 
+  if (x.classList.contains("change")) {
+console.log('hi');
+    btn.style.display="block"
+  } else {
+        btn.style.display="none"
+    console.log('no')
+  }
+}
