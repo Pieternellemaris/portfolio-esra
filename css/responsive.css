@@ -151,7 +151,7 @@ h4 {
         max-height: 25000px;
         height: fit-content;
         padding-bottom: 25px;
-        top: 1150px;
+        top: 1175px;
     }
     .welcome {
 background-color:  #c7d4d1a9;
@@ -220,6 +220,7 @@ left: 3px;
     padding-bottom: 40px;
 }
 .item-container {
+    margin-top: 700px;
     grid-template-rows: repeat(40, 65px);
 }
 #visions {
