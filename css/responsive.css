@@ -93,7 +93,7 @@ h1 {
        top: calc(950px - 25vh);
     }
     .welcome {
-
+background-color:  #c7d4d1a9;
         min-height: fit-content;
         height: fit-content;
         position: relative;
@@ -150,7 +150,7 @@ left: 3px;
 .information_mobile {
     display: block;
     width: calc(100% - 50px );
-    background-color: #c7d4d180;
+    background-color: #c7d4d1a9;
     margin: 0 25px;
         border-radius: 8px;
 }
@@ -199,3 +199,22 @@ left: 3px;
 }
 }
 
+@media (orientation: portrait) and (max-width: 390px){
+    h1 {
+font-size: 15pt;
+    }
+    p {
+font-size: 12pt;
+
+    }
+    .bar1, .bar2, .bar3 {
+  width: 22px;
+  height: 2px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+.container {
+    margin: 4px 1px;
+}
+}
