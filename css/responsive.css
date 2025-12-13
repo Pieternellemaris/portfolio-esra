@@ -1,6 +1,24 @@
+@media (max-width: 1365px) {
+#poster-item {
+    height: 200px;
+}
+}
+@media (max-width: 1265px) {
+#poster-item {
+    height: 180px;
+}
+}
+@media (max-width: 1165px) {
+#poster-item {
+    height: 115px;
+}
+}
 @media (max-width: 1000px) {
 nav {
       font-size: 16pt;
+}
+#poster-item {
+    height: 100px;
 }
 h1 {
     font-size: 40pt;
@@ -19,8 +37,17 @@ h1 {
 nav {
       font-size: 14pt;
 }
+#poster-item {
+    display: none;
+}
 h1 {
     font-size: 35pt;
+}
+h4{
+    font-size: 12pt;
+}
+#information p1 {
+        font-size: 12pt;
 }
 .mini-window {
     left: calc(1250px - 40vw);
@@ -64,6 +91,12 @@ h1 {
 @media  (max-width: 600px) { 
 h1 {
     font-size: 25pt;
+}
+h4 {
+        font-size: 10pt;
+}
+#information p1 {
+        font-size: 10pt;
 }
 .item-container {
     margin: 380px;
