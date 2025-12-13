@@ -15,7 +15,7 @@ h1 {
 }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
 nav {
       font-size: 14pt;
 }
@@ -53,9 +53,7 @@ h1 {
     margin-top: 40px;
 }
 
-.welcome {
-        min-height: calc(50vh - 100px);
-}
+
 .page-button {
     font-size: 17pt;
     width: 140px;
@@ -75,9 +73,129 @@ h1 {
 .page-button {
     font-size: 15pt;
     width: 130px;
-    height: 50px;
+    height: fit-content;
 }
-.welcome {
-        min-height: calc(50vh - 120px);
+
+}
+@media (orientation: portrait) and (max-width: 600px){
+    nav ul {
+        display: none;
+    }
+        .container-buttons {
+       display: none;
+    }
+    .mini-window {
+        left: calc(1250px - 45vw);
+        min-width: 90vw;
+        max-height: 25000px;
+        height: fit-content;
+        padding-bottom: 25px;
+       top: calc(950px - 25vh);
+    }
+    .welcome {
+
+        min-height: fit-content;
+        height: fit-content;
+        position: relative;
+    }
+    h1 {
+        padding: 5px;
+        font-size: 18pt;
+    }
+    .window {
+        margin: 0;
+    }
+    #hidden-nav {
+        position: absolute;
+        display: block;
+top: 3px;
+left: 3px;
+    }
+    #hiddenDrop {
+        display: none;
+    }
+    .container {
+  display: inline-block;
+  cursor: pointer;
+}
+.dropContent {
+    background-color: #a59483;
+
+}
+.dropContent a {
+        color: black;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+#img-about {
+    margin: 0 auto;
+    float: none;
+}
+.information_mobile {
+    display: block;
+    width: calc(100% - 50px );
+    background-color: #c7d4d180;
+    margin: 0 25px;
+        border-radius: 8px;
+}
+.mobile {
+    margin: 0 20px;
+    padding-bottom: 40px;
+}
+.item-container {
+    grid-template-rows: repeat(40, 65px);
+}
+#visions {
+    grid-column: 10 / 17;
+    grid-row: 37; 
+}
+#insect {
+        grid-column: 16 / 20;
+    grid-row: 5;
+}
+#title_unknown {
+    grid-column: 17 / 22;
+    grid-row: 8;
+}
+#ono {
+    grid-column: 16 / 20;
+    grid-row: 12;
+}
+#altar {
+    grid-column: 8 / 12;
+    grid-row: 26;
+}
+#blad {
+    grid-column: 8 / 12;
+    grid-row: 17;
+}
+#werkkleding {
+    grid-column: 8 / 11;
+    grid-row: 9;
+}
+#sefarn {
+    grid-column: 16 / 20;
+    grid-row: 30;
+}
+#zw {
+    grid-column: 16 / 24;
+    grid-row: 20;
 }
 }
+

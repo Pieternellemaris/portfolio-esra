@@ -349,7 +349,6 @@ margin-top: 60px;
 
 }
 .about-content {
-
     background-color: rgb(222, 225, 219);
 }
 .event-content h1 {
@@ -372,4 +371,11 @@ margin-top: 60px;
 #img-exh {
   place-self: center;
   padding: 20px;
+}
+
+#hidden-nav {
+  display: none;
+}
+.information_mobile {
+  display: none;
 }
