@@ -90,7 +90,7 @@ h1 {
         max-height: 25000px;
         height: fit-content;
         padding-bottom: 25px;
-       top: calc(950px - 25vh);
+        top: 1000px;
     }
     .welcome {
 background-color:  #c7d4d1a9;
@@ -163,7 +163,7 @@ left: 3px;
 }
 #visions {
     grid-column: 10 / 17;
-    grid-row: 37; 
+    grid-row: 35; 
 }
 #insect {
         grid-column: 16 / 20;
