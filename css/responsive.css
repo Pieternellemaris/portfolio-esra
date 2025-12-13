@@ -224,8 +224,8 @@ left: 3px;
     grid-template-rows: repeat(40, 65px);
 }
 #visions {
-    grid-column: 10 / 17;
-    grid-row: 35; 
+        grid-column: 8 / 15;
+        grid-row: 32;
 }
 #insect {
         grid-column: 16 / 20;
