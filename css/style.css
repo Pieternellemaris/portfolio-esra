@@ -199,11 +199,10 @@ main {
     border-color: black;
     border-style: dotted; 
     border-radius: 20px;
-    min-height: 450px;
+    min-height: 60vh;
         max-height: 1000px;
-    height: 60vh;
     min-width: 60vw;
-
+overflow: clip;
 }
 
 .window {
@@ -214,15 +213,16 @@ main {
 
 }
 
-
+.event-content {
+  height: fit-content;
+}
 .welcome {
       text-align: center;
     border-radius: 10px;
     margin: 25px;
-    height: calc(60vh - calc(35vh - 30vh) - 140px);
-    max-height: calc(1000px - calc(35vh - 30vh) - 140px);
+    max-height: calc(1000px - 5vh - 140px);
     background-color: #c7d4d180;
-        min-height: 280px;
+        min-height: calc(60vh - 180px);
 }
 
 .page-button{
