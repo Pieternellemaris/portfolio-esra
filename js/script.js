@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!windowDiv) return;
     windowDiv.innerHTML = `
       <div class="event-content">
-        <img height="600px" class="about-content" id="img-about" src="images/about_1.jpeg" alt="about">
+        <img class="about-content" id="img-about" src="images/about_1.jpeg" alt="about">
         <p class="about-content">
           My art arises from the acts of painting, sculpture, world-building, and the conscious combining
           of collected found objects. I mainly work intuitively and start out from a material or a simple
