@@ -391,3 +391,8 @@ margin-top: 20px;
 .reveal_vertical {
   display: none;
 }
+
+.grid-line,
+.grid-balk {
+  pointer-events: none;
+}
