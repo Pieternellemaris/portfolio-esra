@@ -7,6 +7,9 @@
 #poster-item {
     height: 180px;
 }
+#img-about {
+    height: 400px;
+}
 }
 @media (max-width: 1165px) {
 #poster-item {
@@ -37,6 +40,7 @@ h1 {
 nav {
       font-size: 14pt;
 }
+
 #poster-item {
     display: none;
 }
@@ -67,6 +71,9 @@ p1 {
 nav {
     height: auto;
     
+}
+#img-about {
+    height: 350px;
 }
 .item-container {
     margin: 280px;
