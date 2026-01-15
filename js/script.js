@@ -1,55 +1,86 @@
 window.addEventListener('load', () => {
-  const maxScrollX = document.documentElement.scrollWidth - window.innerWidth;
-  const maxScrollY = document.documentElement.scrollHeight - window.innerHeight;
+  const root = document.scrollingElement || document.documentElement;
 
-  // Start centered
-  window.scrollTo(maxScrollX / 2, maxScrollY / 2);
+  let maxScrollX = 0;
+  let maxScrollY = 0;
+  let targetX = 0;
+  let targetY = 0;
 
-  let targetX = maxScrollX / 2;
-  let targetY = maxScrollY / 2;
-
-  // How fast to move (tweak for sensitivity)
   const speed = 0.02;
 
-  function hasTouchSupport() {
-  return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-}
+  const isTouchDevice =
+    matchMedia('(pointer: coarse)').matches ||
+    navigator.maxTouchPoints > 0;
 
-if (hasTouchSupport()) {
-  console.log("Mobile device detected");
-  
-} else {
-  console.log("Desktop device detected");
-    window.addEventListener('mousemove', (e) => {
-    const centerX = window.innerWidth / 2;
-    const centerY = window.innerHeight / 2;
+  // Recalculate scroll limits
+  function updateBounds() {
+    maxScrollX = root.scrollWidth - window.innerWidth;
+    maxScrollY = root.scrollHeight - window.innerHeight;
 
-    // Get distance of mouse from center, normalized between -1 and 1
-    const moveX = (e.clientX - centerX) / centerX;
-    const moveY = (e.clientY - centerY) / centerY;
-
-    // Map mouse movement to target scroll positions (clamped)
-    targetX = Math.min(maxScrollX, Math.max(0, maxScrollX / 2 + moveX * (maxScrollX / 2)));
-    targetY = Math.min(maxScrollY, Math.max(0, maxScrollY / 2 + moveY * (maxScrollY / 2)));
-  });
-
-  function smoothScroll() {
-    const currentX = window.scrollX;
-    const currentY = window.scrollY;
-
-    // Move current scroll a bit toward the target
-    const newX = currentX + (targetX - currentX) * speed;
-    const newY = currentY + (targetY - currentY) * speed;
-
-    window.scrollTo(newX, newY);
-
-    requestAnimationFrame(smoothScroll);
+    maxScrollX = Math.max(0, maxScrollX);
+    maxScrollY = Math.max(0, maxScrollY);
   }
 
-  smoothScroll();
-}
+  // Center the page safely (mobile-friendly)
+  function centerPage() {
+    updateBounds();
 
+    targetX = maxScrollX / 2;
+    targetY = maxScrollY / 2;
+
+    window.scrollTo({
+      left: targetX,
+      top: targetY,
+      behavior: 'auto'
+    });
+  }
+
+  // Wait for mobile layout to fully settle
+  requestAnimationFrame(() => {
+    setTimeout(centerPage, 120);
+  });
+
+  // Re-center on orientation change (important for Android)
+  window.addEventListener('resize', () => {
+    setTimeout(centerPage, 100);
+  });
+
+  // Desktop-only mouse movement
+  if (!isTouchDevice) {
+    window.addEventListener('mousemove', (e) => {
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+
+      const moveX = (e.clientX - centerX) / centerX;
+      const moveY = (e.clientY - centerY) / centerY;
+
+      targetX = Math.min(
+        maxScrollX,
+        Math.max(0, maxScrollX / 2 + moveX * (maxScrollX / 2))
+      );
+
+      targetY = Math.min(
+        maxScrollY,
+        Math.max(0, maxScrollY / 2 + moveY * (maxScrollY / 2))
+      );
+    });
+
+    function smoothScroll() {
+      const currentX = window.scrollX;
+      const currentY = window.scrollY;
+
+      window.scrollTo(
+        currentX + (targetX - currentX) * speed,
+        currentY + (targetY - currentY) * speed
+      );
+
+      requestAnimationFrame(smoothScroll);
+    }
+
+    smoothScroll();
+  }
 });
+
 
 function myDisapear(button) {
     const categories = ['schilderwerk', 'overig'];
